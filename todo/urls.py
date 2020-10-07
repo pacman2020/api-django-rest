@@ -4,6 +4,8 @@ from . import views
 
 urlpatterns = [
     path('', views.PostView.as_view()),
+    path('<int:pk>/', views.PostGet.as_view()),
+    path('', views.PostNew.as_view()),
     path('<int:pk>/', views.PostViewDetail.as_view()),
 ]
 
